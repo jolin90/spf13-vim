@@ -22,7 +22,7 @@
 " spf13 options {
 
     " Prevent automatically changing to open file directory
-    "   let g:spf13_no_autochdir = 1
+    let g:spf13_no_autochdir = 1
 
     " Disable views
     "   let g:spf13_no_views = 1
@@ -52,7 +52,7 @@
     "   let g:spf13_keep_trailing_whitespace = 1
 
     " Enable powerline symbols
-    "   let g:airline_powerline_fonts = 1
+    let g:airline_powerline_fonts = 1
 
     " vim files directory
     "   let g:spf13_consolidated_directory = <full path to desired directory>
@@ -71,9 +71,9 @@
     " For some colorschemes, autocolor will not work (eg: 'desert', 'ir_black')
     " Indent guides will attempt to set your colors smartly. If you
     " want to control them yourself, do it here.
-    "   let g:indent_guides_auto_colors = 0
-    "   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121 ctermbg=233
-    "   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=234
+    let g:indent_guides_auto_colors = 0
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121 ctermbg=233
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=234
 
     " Leave the default font and size in GVim
     " To set your own font, do it from ~/.vimrc.local
