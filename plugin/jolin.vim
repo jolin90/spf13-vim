@@ -168,3 +168,8 @@ autocmd VimEnter * set nospell
 let g:spf13_no_autochdir = 1
 let c_space_errors = 1
 set expandtab
+
+let g:EasyGrepMode           = 0 " All:0, Open Buffers:1, TrackExt:2,
+let g:EasyGrepCommand        = 0 " Use vimgrep:0, grepprg:1
+let g:EasyGrepRecursive      = 1 " Recursive searching
+let g:EasyGrepIgnoreCase     = 1 " not ignorecase:0
