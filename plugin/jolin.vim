@@ -136,7 +136,7 @@ nmap  <F2> :TlistToggle<cr>
 nmap  <F3> :NERDTreeToggle<cr>
 nmap  <F4> :MRU<cr>
 nmap  <F5> <Plug>LookupFile<cr>
-nmap  <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.cpp **/*.c **/*.h **/*.py **/*.S<cr><C-o>:cw<cr>
+nmap  <F6> :vimgrep /<C-R>=expand("\<<cword>\>")<cr>/ **/*.cpp **/*.c **/*.h **/*.py **/*.S<cr><C-o>:cw<cr>
 nmap  <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .")<cr>
 nmap <F10> :call HLUDSync()<cr>
 nmap <F11> :call RunShell("Generate filename tags", "~/.vim/shell/genfiletags.sh")<cr>
@@ -157,6 +157,7 @@ map <leader>ne :NERDTreeToggle<CR>
 map <leader>tl :TlistToggle<cr>
 nnoremap <leader>ma :set mouse=a<cr>
 nnoremap <leader>mu :set mouse=<cr>
+nnoremap <leader>mm :set mouse=<cr>
 nmap <leader>tb :TagbarToggle<CR>
 nnoremap <leader>lc :lclose<CR>   "close locationlist
 inoremap <leader><leader> <C-x><C-o>"
@@ -167,7 +168,7 @@ inoremap <leader><leader> <C-x><C-o>
 autocmd VimEnter * set nospell
 let g:spf13_no_autochdir = 1
 let c_space_errors = 1
-set expandtab
+"set expandtab
 
 let g:EasyGrepMode           = 0 " All:0, Open Buffers:1, TrackExt:2,
 let g:EasyGrepCommand        = 0 " Use vimgrep:0, grepprg:1

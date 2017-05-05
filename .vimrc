@@ -155,12 +155,12 @@
     endif
 
     " Setting up the directories {
-        set backup                  " Backups are nice ...
-        if has('persistent_undo')
-            set undofile                " So is persistent undo ...
-            set undolevels=1000         " Maximum number of changes that can be undone
-            set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
-        endif
+        "set backup                  " Backups are nice ...
+        "if has('persistent_undo')
+            "set undofile                " So is persistent undo ...
+            "set undolevels=1000         " Maximum number of changes that can be undone
+            "set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
+        "endif
 
         " To disable views add the following to your .vimrc.before.local file:
         "   let g:spf13_no_views = 1
@@ -551,7 +551,7 @@
     " }
 
     " Ctags {
-        set tags=./tags;/,~/.vimtags
+        set tags=./tags;/,~/.vimtags,/lib/modules/3.13.0-24-generic/build/tags
 
         " Make tags placed in .git/tags file available in all levels of a repository
         let gitroot = substitute(system('git rev-parse --show-toplevel'), '[\n\r]', '', 'g')
@@ -859,11 +859,11 @@
             if !exists('g:neocomplete#sources#omni#input_patterns')
                 let g:neocomplete#sources#omni#input_patterns = {}
             endif
-            let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-            let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-            let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-            let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-            let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+            "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+            "let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+            "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+            "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+            "let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
     " }
     " neocomplcache {
         elseif count(g:spf13_bundle_groups, 'neocomplcache')
@@ -1101,9 +1101,9 @@
                     \ 'views': 'viewdir',
                     \ 'swap': 'directory' }
 
-        if has('persistent_undo')
-            let dir_list['undo'] = 'undodir'
-        endif
+        "if has('persistent_undo')
+            "let dir_list['undo'] = 'undodir'
+        "endif
 
         " To specify a different directory in which to place the vimbackup,
         " vimviews, vimundo, and vimswap files/directories, add the following to

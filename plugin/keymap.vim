@@ -7,7 +7,7 @@ nmap <Tab>		:set nohls<CR>:'<,'>s/^.\+/\t&/g<CR>
 
 nmap q			:xa!<CR>
 nmap w			:wa!<CR>
-nmap m			:!make<CR>
+"nmap m			:!make<CR>
 nmap <C-n>		:set mouse=v<CR>:set nonu<CR>
 nmap <C-a>		:set mouse=a<CR>:set nu<CR>
 nmap <C-f>		:%s/\s\+$//g<CR>
@@ -56,20 +56,17 @@ function s:set_keymap_c()
 endfunction
 
 function s:set_keymap_cpp()
-    set  expandtab
     call s:set_keymap_c()
     nmap <Tab>f		k$a<CR>for (int i = 0; i < ; i++)<CR>{<CR>}<Esc>kk$hhhhhi
     nmap <Tab>cl	iclass <CR>{<CR><Backspace>private:<CR><CR><CR><Backspace>public:<CR><CR>};<Esc>kkkkkkk$a
 endfunction
 
 function s:set_keymap_java()
-    set expandtab
     call s:set_keymap_cpp()
     nmap <Tab>cl	ipublic class <CR>{<CR>}<Esc>kk$a
 endfunction
 
 function s:set_keymap_asm()
-    set expandtab
     map \\			:'<,'>s/^\(\s*\);\+\s*/\1/g<CR>:set nohls<CR>
     vmap /			:s/^\(\s*\)\(.\+\)/\1; \2/g<CR>:set nohls<CR>
     vmap \\			:s/^\(\s*\);\+\s*/\1/g<CR>:set nohls<CR>
@@ -77,7 +74,6 @@ function s:set_keymap_asm()
 endfunction
 
 function s:set_keymap_vim()
-    set expandtab
     map \\			:'<,'>s/^\(\s*\)"\+\s*/\1/g<CR>:set nohls<CR>
     vmap /			:s/^\(\s*\)\(.\+\)/\1" \2/g<CR>:set nohls<CR>
     vmap \\			:s/^\(\s*\)"\+\s*/\1/g<CR>:set nohls<CR>
@@ -94,7 +90,6 @@ function s:set_keymap_make()
 endfunction
 
 function s:set_keymap_python()
-    set  expandtab
     call s:set_keymap_sh()
 endfunction
 
