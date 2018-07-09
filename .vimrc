@@ -154,6 +154,10 @@
         augroup END
     endif
 
+    set noundofile
+    set nobackup
+    set noswapfile
+
     " Setting up the directories {
         "set backup                  " Backups are nice ...
         "if has('persistent_undo')
@@ -551,7 +555,7 @@
     " }
 
     " Ctags {
-        set tags=./tags;/,~/.vimtags,/lib/modules/3.13.0-24-generic/build/tags
+        set tags=./tags;/,~/.vimtags
 
         " Make tags placed in .git/tags file available in all levels of a repository
         let gitroot = substitute(system('git rev-parse --show-toplevel'), '[\n\r]', '', 'g')
@@ -1101,9 +1105,9 @@
                     \ 'views': 'viewdir',
                     \ 'swap': 'directory' }
 
-        "if has('persistent_undo')
-            "let dir_list['undo'] = 'undodir'
-        "endif
+        if has('persistent_undo')
+            let dir_list['undo'] = 'undodir'
+        endif
 
         " To specify a different directory in which to place the vimbackup,
         " vimviews, vimundo, and vimswap files/directories, add the following to

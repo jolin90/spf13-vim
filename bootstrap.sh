@@ -16,8 +16,8 @@
 
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
-[ -z "$APP_PATH" ] && APP_PATH="$HOME/.spf13-vim-3"
-[ -z "$REPO_URI" ] && REPO_URI='https://github.com/spf13/spf13-vim.git'
+[ -z "$APP_PATH" ] && APP_PATH="$HOME/.spf13-vim-jolin"
+[ -z "$REPO_URI" ] && REPO_URI='https://github.com/jolin90/spf13-vim.git'
 [ -z "$REPO_BRANCH" ] && REPO_BRANCH='3.0'
 debug_mode='0'
 fork_maintainer='0'
@@ -179,9 +179,9 @@ variable_set "$HOME"
 program_must_exist "vim"
 program_must_exist "git"
 
-do_backup       "$HOME/.vim" \
-                "$HOME/.vimrc" \
-                "$HOME/.gvimrc"
+#do_backup       "$HOME/.vim" \
+#                "$HOME/.vimrc" \
+#                "$HOME/.gvimrc"
 
 sync_repo       "$APP_PATH" \
                 "$REPO_URI" \
