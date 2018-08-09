@@ -137,7 +137,7 @@ nmap  <F3> :NERDTreeToggle<cr>
 nmap  <F4> :MRU<cr>
 nmap  <F5> <Plug>LookupFile<cr>
 nmap  <F6> :vimgrep /<C-R>=expand("\<<cword>\>")<cr>/ **/*.cpp **/*.c **/*.h **/*.py **/*.S<cr><C-o>:cw<cr>
-nmap  <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .")<cr>
+nmap  <F9> :call RunShell("Generate tags", "ctags --links=no -R --c++-kinds=+p --fields=+iaS --extra=+q .")<cr>
 nmap <F10> :call HLUDSync()<cr>
 nmap <F11> :call RunShell("Generate filename tags", "~/.vim/shell/genfiletags.sh")<cr>
 nmap <F12> :call RunShell("Generate cscope", "cscope -Rb")<cr>:cs add cscope.out<cr>
