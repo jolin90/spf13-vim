@@ -46,7 +46,7 @@ function s:set_keymap_c()
     nmap <Tab>u			iunion <CR>{<CR>};<CR><Esc>kkk$a
     nmap <Tab>h			istatic int (void)<CR>{<CR>return 0;<CR><Backspace>}<CR><Esc>kkkk$hhhhhi
     nmap h<Tab>			<Tab>h
-    nmap <Tab>m			iint main(int argc, char *argv[])<CR>{<CR><CR>return 0;<CR>}<Esc>ggi#include <stdio.h><CR><CR><Esc><C-o>kkk$a<CR>
+    nmap <Tab>m			iint main(int argc, char *argv[])<CR>{<CR><CR>return 0;<CR>}<Esc>ggi#include <stdio.h><CR>#include <stdlib.h><CR>#include <string.h><CR><CR><Esc><C-o>kkk$a<CR>
     nmap <Tab>p			$a<CR>printf("\033[31m jolin log   : \033[0m" "%s %s %d %s\n", __FILE__, __func__, __LINE__, strerror(errno));<Esc>
     nmap m<Tab>			<Tab>m
     nmap <Tab>in		i#include <><Left>
